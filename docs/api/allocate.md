@@ -1,0 +1,3 @@
+# Allocate
+
+::: downscaler.allocate.allocate

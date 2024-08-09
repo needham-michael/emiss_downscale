@@ -2,13 +2,31 @@ site_name: Photochemical Emissions Downscaler
 site_url: https://needham-michael.github.io/emiss_downscale/
 nav:
   - Home: index.md
-  - Getting Started: setup.md
+  - Installation: installation.md
+  - Getting Started: getting_started.md
+  - Usage:
+    - Offline Usage: usage_offline.md
+    - Online Usage: usage_online.md
+  - About: about.md
+  - API:
+    - Allocate: api/allocate.md
+    - Utils:
+      - CMAQ: api/cmaq.md
+      - Xarray: api/xarray.md
+  
 theme:
   name: material
 
 markdown_extensions:
   - admonition
   - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 plugins: 
 - search
@@ -17,4 +35,3 @@ plugins:
       python:
         options:
           docstring_style: numpy
-          docstring_section_style: table

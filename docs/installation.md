@@ -1,4 +1,4 @@
-Getting Started
+Installation
 ===============
 
 Getting the code
@@ -17,11 +17,12 @@ Preparing the python environment
 
 The `environment.yml` file includes instructions for recreating the same conda environment (also named `emiss_downscale`) used to develop and run these notebooks. Assuming conda has been __[installed locally](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)__ and __[initialized](https://conda.io/projects/conda/en/latest/dev-guide/deep-dives/activation.html)__ for the user's shell, the environment can be recreated by running the following command from within the base directory
 
-`conda env create -f environment.yml`
+```shell
+conda env create -f environment.yml`
 
-The environment can then be activated with
-
-`conda activate emiss_downscale`
+# Then, activate the environment with
+conda activate emiss_downscale
+```
 
 Installing the project package
 ------------------------------
@@ -31,6 +32,8 @@ You will need to install the project source code into the `emiss_downscale` cond
 (emiss_downscale) pip install .
 ```
 
+This will install the package source code (`/emiss_downscale/downscaler`) into the active conda environment.
+
 Configuring Jupyter Notebooks
 -----------------------------
 
@@ -38,13 +41,15 @@ Configuring Jupyter Notebooks
 
 Once the environment has been created, Jupyter needs to be configured to execute the notebooks *using the environment.* This requires using the __[ipykernel](https://github.com/ipython/ipykernel)__ package, which was included in the `environment.yml` file. From the terminal window, run
 
-`python3 -m ipykernel install --user --name=cmaq_pyenv --display-name="Python3 (cmaq_pyenv)"`
+```shell
+python3 -m ipykernel install --user --name=cmaq_pyenv --display-name="Python3 (cmaq_pyenv)"
+```
 
 Then, select the appropriate tile from the jupyterlab launcher.
 
 ### Usage with JupyterLab or Jupyter Notebooks
 
-Ensure the environment is active and run
+Ensure the environment is active and run one of the following commands to launch a jupyter server.
 
 ```shell
 # For jupyter lab
@@ -53,3 +58,5 @@ Ensure the environment is active and run
 # For the classic notebooks
 (emiss_downscale) jupyter notebook
 ```
+
+Next Up: __[Getting Started](./getting_started.md)__
