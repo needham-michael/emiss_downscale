@@ -222,6 +222,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -231,6 +242,85 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-python-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the python environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-project-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the project package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-jupyter-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Jupyter Notebooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Jupyter Notebooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-with-jupyterhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage with JupyterHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-with-jupyterlab-or-jupyter-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage with JupyterLab or Jupyter Notebooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -256,6 +346,74 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-python-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the python environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-project-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the project package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-jupyter-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Jupyter Notebooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Jupyter Notebooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-with-jupyterhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage with JupyterHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-with-jupyterlab-or-jupyter-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage with JupyterLab or Jupyter Notebooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -270,6 +428,33 @@
 
 
 <h1 id="getting-started">Getting Started</h1>
+<h2 id="getting-the-code">Getting the code</h2>
+<p>The most up-to-date version of this repository including all tutorial data can be downloaded locally using git. You can "get git" onto your local machine <strong><a href="https://git-scm.com/downloads">directly from the git website</a></strong>, or it can be installed within a conda environment using <code>conda install -c conda-forge git</code>. Either way, once git is configured, you can download everything you need to run these examples with</p>
+<pre><code class="language-shell">git clone https://github.com/needham-michael/emiss_downscale.git
+</code></pre>
+<p>This will create a directory called <code>/emiss_downscale</code> on your local machine.</p>
+<h2 id="preparing-the-python-environment">Preparing the python environment</h2>
+<p>The <code>environment.yml</code> file includes instructions for recreating the same conda environment (also named <code>emiss_downscale</code>) used to develop and run these notebooks. Assuming conda has been <strong><a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html">installed locally</a></strong> and <strong><a href="https://conda.io/projects/conda/en/latest/dev-guide/deep-dives/activation.html">initialized</a></strong> for the user's shell, the environment can be recreated by running the following command from within the base directory</p>
+<p><code>conda env create -f environment.yml</code></p>
+<p>The environment can then be activated with</p>
+<p><code>conda activate emiss_downscale</code></p>
+<h2 id="installing-the-project-package">Installing the project package</h2>
+<p>You will need to install the project source code into the <code>emiss_downscale</code> conda environment by running the following command from the root <code>./emiss_downscale</code> folder (make sure that the correct conda environment is selected):</p>
+<pre><code class="language-shell">(emiss_downscale) pip install .
+</code></pre>
+<h2 id="configuring-jupyter-notebooks">Configuring Jupyter Notebooks</h2>
+<h3 id="usage-with-jupyterhub">Usage with JupyterHub</h3>
+<p>Once the environment has been created, Jupyter needs to be configured to execute the notebooks <em>using the environment.</em> This requires using the <strong><a href="https://github.com/ipython/ipykernel">ipykernel</a></strong> package, which was included in the <code>environment.yml</code> file. From the terminal window, run</p>
+<p><code>python3 -m ipykernel install --user --name=cmaq_pyenv --display-name="Python3 (cmaq_pyenv)"</code></p>
+<p>Then, select the appropriate tile from the jupyterlab launcher.</p>
+<h3 id="usage-with-jupyterlab-or-jupyter-notebooks">Usage with JupyterLab or Jupyter Notebooks</h3>
+<p>Ensure the environment is active and run</p>
+<pre><code class="language-shell"># For jupyter lab
+(emiss_downscale) jupyter lab
+
+# For the classic notebooks
+(emiss_downscale) jupyter notebook
+</code></pre>
 
 
 
