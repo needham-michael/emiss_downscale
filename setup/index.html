@@ -435,9 +435,11 @@
 <p>This will create a directory called <code>/emiss_downscale</code> on your local machine.</p>
 <h2 id="preparing-the-python-environment">Preparing the python environment</h2>
 <p>The <code>environment.yml</code> file includes instructions for recreating the same conda environment (also named <code>emiss_downscale</code>) used to develop and run these notebooks. Assuming conda has been <strong><a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html">installed locally</a></strong> and <strong><a href="https://conda.io/projects/conda/en/latest/dev-guide/deep-dives/activation.html">initialized</a></strong> for the user's shell, the environment can be recreated by running the following command from within the base directory</p>
-<p><code>conda env create -f environment.yml</code></p>
-<p>The environment can then be activated with</p>
-<p><code>conda activate emiss_downscale</code></p>
+<pre><code class="language-shell">conda env create -f environment.yml`
+
+# Then, activate the environment with
+conda activate emiss_downscale
+</code></pre>
 <h2 id="installing-the-project-package">Installing the project package</h2>
 <p>You will need to install the project source code into the <code>emiss_downscale</code> conda environment by running the following command from the root <code>./emiss_downscale</code> folder (make sure that the correct conda environment is selected):</p>
 <pre><code class="language-shell">(emiss_downscale) pip install .
@@ -445,7 +447,8 @@
 <h2 id="configuring-jupyter-notebooks">Configuring Jupyter Notebooks</h2>
 <h3 id="usage-with-jupyterhub">Usage with JupyterHub</h3>
 <p>Once the environment has been created, Jupyter needs to be configured to execute the notebooks <em>using the environment.</em> This requires using the <strong><a href="https://github.com/ipython/ipykernel">ipykernel</a></strong> package, which was included in the <code>environment.yml</code> file. From the terminal window, run</p>
-<p><code>python3 -m ipykernel install --user --name=cmaq_pyenv --display-name="Python3 (cmaq_pyenv)"</code></p>
+<pre><code class="language-shell">python3 -m ipykernel install --user --name=cmaq_pyenv --display-name=&quot;Python3 (cmaq_pyenv)&quot;
+</code></pre>
 <p>Then, select the appropriate tile from the jupyterlab launcher.</p>
 <h3 id="usage-with-jupyterlab-or-jupyter-notebooks">Usage with JupyterLab or Jupyter Notebooks</h3>
 <p>Ensure the environment is active and run</p>
