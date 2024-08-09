@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='emiss_downscale',
+    name='downscaler',
     version='0.0.1',
     url='https://github.com/needham-michael/emiss_downscale',
     author='Michael Needham',
