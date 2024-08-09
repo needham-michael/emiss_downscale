@@ -1,5 +1,5 @@
 site_name: Photochemical Emissions Downscaler
-site_url: https://mydomain.org/mysite
+site_url: https://needham-michael.github.io/emiss_downscale/
 nav:
   - Home: index.md
   - Getting Started: setup.md
